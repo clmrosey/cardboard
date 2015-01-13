@@ -1,2 +1,2 @@
-Cardboard AG4M
+Cardboard G4
 =====================

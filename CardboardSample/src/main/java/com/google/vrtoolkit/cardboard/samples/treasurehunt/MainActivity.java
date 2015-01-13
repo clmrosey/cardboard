@@ -101,8 +101,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     private float[] mModelFloor;
 
     private int mScore = 0;
-    private float mObjectDistance = 12f;
-    private float mFloorDepth = 20f;
+    private float mObjectDistance = 12f;//Permet de modifier la profondeur de l'objet + le chiffre est petit + l'objet est proche
+    private float mFloorDepth = 20f;// Permet de modifier la hauteur de l'objet et la hauteur de la caméra + le chiffre est grand + l'objet est haut
 
     private Vibrator mVibrator;
     private CardboardOverlayView mOverlayView;
@@ -164,12 +164,12 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         cardboardView.setRenderer(this);
         setCardboardView(cardboardView);
 
-        mModelCube = new float[16];
+        mModelCube = new float[46];// original : 16
         mCamera = new float[16];
         mView = new float[16];
-        mModelViewProjection = new float[16];
+        mModelViewProjection = new float[36];// 16
         mModelView = new float[16];
-        mModelFloor = new float[16];
+        mModelFloor = new float[20];//16
         mHeadView = new float[16];
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 

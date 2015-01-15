@@ -175,7 +175,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
 
         mOverlayView = (CardboardOverlayView) findViewById(R.id.overlay);
-        mOverlayView.show3DToast("Pull the magnet when you find an object.");
+        mOverlayView.show3DToast("Bonjour c'est un message temporaire");// show3DToast affiche des messages
     }
 
     @Override
@@ -199,8 +199,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     @Override
     public void onSurfaceCreated(EGLConfig config) {
         Log.i(TAG, "onSurfaceCreated");
-        GLES20.glClearColor(0.1f, 0.1f, 0.1f, 0.5f); // Dark background so text shows up well.
-
+        GLES20.glClearColor(0.1f, 0.1f, 0.1f, 0.5f); // Dark background so text shows up well. (rouge, vert, bleu,alpha ) glClearColor permet de dire à quelle valeur doit être initialisé l'écran tandis que glClear s'occupe d'initialiser l'écran.
         ByteBuffer bbVertices = ByteBuffer.allocateDirect(DATA.CUBE_COORDS.length * 4);
         bbVertices.order(ByteOrder.nativeOrder());
         mCubeVertices = bbVertices.asFloatBuffer();

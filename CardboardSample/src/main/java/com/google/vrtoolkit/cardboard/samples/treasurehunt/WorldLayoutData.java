@@ -25,10 +25,10 @@ public final class WorldLayoutData {
             // Front face
             -1.0f, 1.0f, 1.0f,
             -1.0f, -1.0f, 1.0f,
-            1.0f, 1.0f, 1.0f,
+             1.0f, 1.0f, 1.0f,
             -1.0f, -1.0f, 1.0f,
-            1.0f, -1.0f, 1.0f,
-            1.0f, 1.0f, 1.0f,
+             1.0f, -1.0f, 1.0f,
+             1.0f, 1.0f, 1.0f,
 
             // Right face
             1.0f, 1.0f, 1.0f,

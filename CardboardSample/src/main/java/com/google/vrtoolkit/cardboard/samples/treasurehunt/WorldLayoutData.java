@@ -15,11 +15,15 @@
  */
 
 package com.google.vrtoolkit.cardboard.samples.treasurehunt;
-
+/*
+import java.awt.Event;
+import java.awt.*;
+import javax.swing.*;
+*/
 /**
  * Contains vertex, normal and color data.
  */
-public final class WorldLayoutData {
+public final class WorldLayoutData /*extends JFrame*/{
 
     public static final float[] CUBE_COORDS = new float[] {
             // Front face
@@ -221,30 +225,34 @@ public final class WorldLayoutData {
             0.0f, -1.0f, 0.0f
     };
 
-    public static final float[] FLOOR_COORDS = new float[] {
-            200f, 0, -200f,
+    public static final float[] FLOOR_COORDS = new float[] {//Taille du sol
+           /* 200f, 0, -200f,
             -200f, 0, -200f,
             -200f, 0, 200f,
             200f, 0, -200f,
             -200f, 0, 200f,
-            200f, 0, 200f,
+            200f, 0, 200f,*/
     };
 
     public static final float[] FLOOR_NORMALS = new float[] {
+         /* 0.0f, 1.0f, 0.0f,
             0.0f, 1.0f, 0.0f,
             0.0f, 1.0f, 0.0f,
             0.0f, 1.0f, 0.0f,
             0.0f, 1.0f, 0.0f,
-            0.0f, 1.0f, 0.0f,
-            0.0f, 1.0f, 0.0f,
+            0.0f, 1.0f, 0.0f,*/
+            
     };
 
-    public static final float[] FLOOR_COLORS = new float[] {
+    public static final float[] FLOOR_COLORS = new float[] {//couleur du sol
+            /*0.0f, 0.3398f, 0.9023f, 1.0f,
             0.0f, 0.3398f, 0.9023f, 1.0f,
             0.0f, 0.3398f, 0.9023f, 1.0f,
             0.0f, 0.3398f, 0.9023f, 1.0f,
             0.0f, 0.3398f, 0.9023f, 1.0f,
-            0.0f, 0.3398f, 0.9023f, 1.0f,
-            0.0f, 0.3398f, 0.9023f, 1.0f,
+            0.0f, 0.3398f, 0.9023f, 1.0f,*/
+           /* JLabel image = new JLabel(new ImageIcon("image.jpg"));
+            this.setLayout(new BorderLayout());
+            this.add(image, BorderLayout.CENTER);*/
     };
 }

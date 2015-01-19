@@ -197,7 +197,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
      * @param config The EGL configuration used when creating the surface.
      */
     @Override
-    public void onSurfaceCreated(EGLConfig config) {
+    public void onSurfaceCreated(EGLConfig config) 
+    {
         Log.i(TAG, "onSurfaceCreated");
         GLES20.glClearColor(0.1f, 0.1f, 0.1f, 0.5f); // Dark background so text shows up well. (rouge, vert, bleu,alpha ) glClearColor permet de dire à quelle valeur doit être initialisé l'écran tandis que glClear s'occupe d'initialiser l'écran.
         ByteBuffer bbVertices = ByteBuffer.allocateDirect(DATA.CUBE_COORDS.length * 4);
@@ -311,18 +312,21 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
      * @param resId The resource ID of the raw text file about to be turned into a shader.
      * @return The context of the text file, or null in case of error.
      */
-    private String readRawTextFile(int resId) {
+    private String readRawTextFile(int resId) 
+    {
         InputStream inputStream = getResources().openRawResource(resId);
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder sb = new StringBuilder();
             String line;
-            while ((line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) 
+            {
                 sb.append(line).append("\n");
             }
             reader.close();
             return sb.toString();
-        } catch (IOException e) {
+        } catch (IOException e) 
+        {
             e.printStackTrace();
         }
         return null;
